@@ -4,7 +4,7 @@
 ### Image Delivery Microservice ###
 * Docker
 * Typescript
-* **expressJs framework**
+* **Express.js framework**
 * **jimp** package for image manipulation
 * **memory-cache** to cache requests data
 * Other source images can be added in folder at any time while the service is running
@@ -44,8 +44,8 @@ The applications tests contains a directory named **client_download** that has t
 ## RUN ##
 Tested on Ubuntu 18.04
 --
-unzip project.
-cd project
+git clone https://github.com/boianradu/image_delivery_microservice image_delivery_microservice
+cd image_delivery_microservice
 
 --
 * docker build -t radu.boian/ownzones_challenge -f Dockerfile.production .
