@@ -43,18 +43,16 @@ The applications tests contains a directory named **client_download** that has t
 
 ## RUN ##
 Tested on Ubuntu 18.04
---
+```bash
 git clone https://github.com/boianradu/image_delivery_microservice image_delivery_microservice
 cd image_delivery_microservice
 
---
-* docker build -t radu.boian/ownzones_challenge -f Dockerfile.production .
-* docker build -t radu.boian/ownzones_challenge_test -f Dockerfile.test .
---
-* docker network create ownzones
-* docker container run --rm --name ownzones -d -P --network=ownzones radu.boian/ownzones_challenge
-* docker container run --rm --name ownzones_test  --network=ownzones radu.boian/ownzones_challenge_test
-
+docker build -t radu.boian/ownzones_challenge -f Dockerfile.production .
+docker build -t radu.boian/ownzones_challenge_test -f Dockerfile.test .
+docker network create ownzones
+docker container run --rm --name ownzones -d -P --network=ownzones radu.boian/ownzones_challenge
+docker container run --rm --name ownzones_test  --network=ownzones radu.boian/ownzones_challenge_test 
+```
 To run the test on local machine.
 Tested on Windows 10.
 Change constant variable **testingAddress** inside ./tests/config/constants.js to **localhost**
